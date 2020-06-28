@@ -18,27 +18,26 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
-  date_end = ""
+  title = "Research Associate"
+  company = "Transport for Cairo"
+  company_url = "https://transportforcairo.com/"
+  location = "Cairo"
+  date_start = "2018-09-01"
+  date_end = "2018-09-15"
   description = """
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
+  Responsibilities:
+  * Contributed in a research capacity towards a bus study in Greater Cairo funded by the World Bank
+  * Worked closely with the GIS team to align GIS outputs with project analysis and modeling
+  * In charge of fieldwork for mapping entire formal and informal public transport networks of the Greater Cairo Region
   """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  title = "Research Assistant"
+  company = "Access to Knowledge for Development Center"
+  company_url = "https://business.aucegypt.edu/research/centers/a2k4d"
+  location = "Cairo"
+  date_start = "2018-03-01"
+  date_end = "2018-09-01"
+  description = """Worked on gaining insights into transportation sector through data-driven research"""
 
 +++
