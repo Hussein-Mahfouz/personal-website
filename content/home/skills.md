@@ -29,9 +29,9 @@ subtitle = ""
   description = "100%"  
   
 [[feature]]
-  icon = "dryad"
-  icon_pack = "ai"
-  name = "Photography"
+  icon = "asterisk"
+  icon_pack = "fas"
+  name = "Network Analysis"
   description = "10%"
 
 +++

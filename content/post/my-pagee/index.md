@@ -1,7 +1,7 @@
 ---
 title: Accessibility Analysis
 subtitle: Cairo
-summary: Learn things bla bla bla
+summary: Learn things bla bla 
 authors:
 - admin
 tags: []
