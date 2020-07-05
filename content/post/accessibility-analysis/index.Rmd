@@ -1,6 +1,53 @@
 ---
-title: "Accessibility Analysis in R"
+title: "R Notebook"
 author: "Hussein"
-date: "7/5/2020"
-output: html_document
+output: html_notebook
+
 ---
+
+
+
+```{r echo = T, results = 'hide'}
+library(tidyverse)
+
+# this is a lookup table matching MSOAs to major towns and cities
+city_names <- readr::read_csv('Middle_Layer_Super_Output_Area__2011__to_Major_Towns_and_Cities__December_2015__Lookup_in_England_and_Wales.csv') 
+# change column name
+city_names <- city_names %>% 
+  dplyr::rename(city = TCITY15NM)
+
+
+
+```
+```{r}
+city_names
+```
+
+```{r echo = T, results = 'hide'}
+# flow data from the 2011 census https://www.nomisweb.co.uk/census/2011/bulk/rOD1
+flows <- read_csv('flow_data.csv')
+```
+
+
+```{r }
+head(flows)
+```
+
+# proxy for number of jobs in each MSOA
+
+
+```{r }
+flows <- flows %>% group_by(`Area of workplace`) %>%
+  summarize(jobs = sum(`All categories: Method of travel to work`))
+```
+```{r}
+
+# add a column with the city name corresponding to each Workplace MSOA
+flows <- flows %>% 
+  left_join(city_names[,c("MSOA11CD", "city")], by = c("Area of workplace" = "MSOA11CD")) 
+```
+
+```{r}
+MSOAS <- flows %>% dplyr::filter(city == "Manchester")
+```
+
